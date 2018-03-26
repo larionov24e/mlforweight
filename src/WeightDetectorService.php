@@ -27,7 +27,7 @@ class WeightDetectorService implements Detector
         }
 
         $modelManager = new ModelManager();
-        $restoredClassifier = $modelManager->restoreFromFile('../mldata/' . self::ML_FILENAME_DISWEIGHT);
+        $restoredClassifier = $modelManager->restoreFromFile(__DIR__ . '/../mldata/' . self::ML_FILENAME_DISWEIGHT);
 
         return round($restoredClassifier->predict([$width, $height, $length]), 2);
     }

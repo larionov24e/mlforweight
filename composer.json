@@ -23,7 +23,5 @@
         "psr-4": {
             "WeightDetector\\Weight\\": "src/"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

@@ -2,41 +2,22 @@
 
 namespace WeightDetector\Weight;
 
-use Phpml\ModelManager;
+use Illuminate\Support\ServiceProvider;
 
-class WeightDetectorServiceProvider implements Detector
-{
-    /**
-     * ML dis weght filename
-     */
-    const ML_FILENAME_DISWEIGHT = 'disWeightTainModel';
+class WeightDetectorServiceProvider extends ServiceProvider {
 
-    /**
-     * @param float $width
-     * @param float $height
-     * @param float $length
-     * @return float
-     * @throws \Exception
-     */
-    public function getDisWeight(float $width, float $height, float $length) {
+    protected $defer = true;
 
-        if(!$width || !$height || !$length) {
-            throw new \Exception('No data');
-        }
+    public function boot() { }
 
-        $modelManager = new ModelManager();
-        $restoredClassifier = $modelManager->restoreFromFile('../mldata/' . self::ML_FILENAME_DISWEIGHT);
+    public function register() {
+        $this->app->singleton('weightDetector', function($app) {
 
-        return round($restoredClassifier->predict([$width, $height, $length]), 2);
+        return new WeightDetectorService();
+        });
     }
 
-    /**
-     * Method for get product weight
-     *
-     * @return mixed
-     */
-    public function getProductWeight()
-    {
-        // TODO: Implement getProductWeight() method.
+    public function provides() {
+        return ['weightDetector'];
     }
 }

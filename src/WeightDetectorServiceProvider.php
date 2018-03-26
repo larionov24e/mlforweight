@@ -8,12 +8,10 @@ class WeightDetectorServiceProvider extends ServiceProvider {
 
     protected $defer = true;
 
-    public function boot() { }
 
     public function register() {
         $this->app->singleton('weightDetector', function($app) {
-
-        return new WeightDetectorService();
+            return new WeightDetectorService();
         });
     }
 

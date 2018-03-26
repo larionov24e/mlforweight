@@ -9,16 +9,6 @@
     "require": {
         "php-ai/php-ml": "^0.6.2"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "WeightDetector\\Weight\\WeightDetectorServiceProvider"
-            ],
-            "aliases": {
-                "Bar": "WeightDetector\\Weight\\WeightDetectorFacade"
-            }
-        }
-    },
     "autoload": {
         "psr-4": {
             "WeightDetector\\Weight\\": "src/"

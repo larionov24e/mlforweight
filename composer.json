@@ -6,7 +6,6 @@
             "email": "el.intertech@gmail.com"
         }
     ],
-    "license": "MIT",
     "require": {
         "php-ai/php-ml": "^0.6.2"
     },
@@ -24,5 +23,7 @@
         "psr-4": {
             "WeightDetector\\Weight\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

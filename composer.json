@@ -1,5 +1,5 @@
 {
-    "name": "egorlarionov1/mlforweight",
+    "name": "larionov24e/mlforweight",
     "authors": [
         {
             "name": "egorlarionov1",
@@ -23,5 +23,5 @@
         "psr-4": {
             "WeightDetector\\Weight\\": "src/"
         }
-    },
+    }
 }

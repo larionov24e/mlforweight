@@ -24,5 +24,6 @@ Add to config/app.php to providers list
 Example:<br><br>
 <code>
 $weightDetect = app()->get('weightDetector');
-$weightDetect->getDisWeight(21.3, 9.1, 26.4);
+$disWeight = $weightDetect->getDisWeight(21.3, 9.1, 26.4);
+  // return 1.02
 </code>

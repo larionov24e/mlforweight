@@ -19,5 +19,9 @@
             }
         }
     },
-    "minimum-stability": "dev"
+    "autoload": {
+        "psr-4": {
+            "WeightDetector\\Weight\\": "src/"
+        }
+    },
 }

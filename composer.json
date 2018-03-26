@@ -18,5 +18,6 @@
                 "Bar": "WeightDetector\\Weight\\WeightDetectorFacade"
             }
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
